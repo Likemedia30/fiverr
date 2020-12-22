@@ -55,6 +55,7 @@
   text-align: center;
   padding: 10px 0;
   opacity: 0.5;
+  padding-bottom: $height_header + 10;
 }
 
 @media (min-width: 767px) {
@@ -87,5 +88,9 @@
         opacity: 0;
       }
     }
+  }
+
+  .prefooter {
+    padding: 10px 0;
   }
 }

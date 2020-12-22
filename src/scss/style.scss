@@ -153,7 +153,9 @@ body {
   background-color: $fonBody;
   scroll-behavior: smooth;
 }
-body.hidden {
+body.hidden,
+body.hiddenModal,
+body.hiddenCabinet {
   height: 100vh;
   overflow: hidden;
 }
@@ -166,11 +168,6 @@ a,
 p,
 div {
   color: $color_main;
-  font-size: $fontSize_main;
-  font-family: $cormorant;
-  text-decoration: none;
-}
-span {
   font-size: $fontSize_main;
   font-family: $cormorant;
   text-decoration: none;
@@ -197,6 +194,72 @@ iframe {
 
 .link {
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  input {
+    border: 1px solid $color_border_input;
+    color: $color_input;
+    line-height: $height_input;
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color_input-focus;
+    }
+  }
+  label {
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid $color_border_input;
+  color: $color_input;
+  line-height: $height_input;
+  padding-left: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color_input-focus;
+  }
+}
+
+.select-container {
+  position: relative;
+  background-color: transparent;
+
+  select {
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
+  }
+
+  i {
+    position: absolute;
+    right: 15px;
+    color: $color_border_input;
+    z-index: 1;
+    top: 10px;
+  }
+}
+
+.input-group.radio-group {
+  display: flex;
+
+  label:nth-child(2) {
+    margin-left: 15px;
+  }
 }
 
 .button {
@@ -221,20 +284,15 @@ iframe {
   }
 
   &__icon {
-    color: $color_button;
     padding-top: 3px;
   }
   span {
-    color: $color_button;
-    font-size: $fontSize_button;
     text-align: center;
   }
 
   &:hover {
     opacity: 0.8;
-    span {
-      color: $color_button;
-    }
+    color: $color_button;
   }
 }
 
@@ -242,13 +300,6 @@ iframe {
   border: 1px solid $color_button-tran;
   background: $fon_button-tran;
   color: $color_button-tran;
-
-  .button__icon {
-    color: $color_button-tran;
-  }
-  span {
-    color: $color_button-tran;
-  }
 }
 
 .button.button-showMore {
@@ -258,8 +309,6 @@ iframe {
   font-size: $fontSize_button;
 
   span {
-    color: $color_second;
-    font-size: $fontSize_button;
     padding-right: 5px;
   }
 
@@ -281,6 +330,14 @@ iframe {
 
 .button.facebook-button {
   background: #365899;
+  font-size: $fontSize_small;
+}
+
+.button.gmail-button {
+  background: #ffff;
+  font-size: $fontSize_small;
+  color: $color_main;
+  border-color: $color_main;
 }
 
 .thumbnail {
@@ -916,6 +973,47 @@ section {
   }
 }
 
+.radio-strd {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 0;
+
+  &__mark {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $color_border_input;
+    left: 0;
+    top: -3px;
+  }
+
+  &__mark:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+    background-color: $color_main;
+    border-radius: 50%;
+    display: none;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ &__mark:after {
+    display: block;
+  }
+}
+
 .checkContainer {
   display: block;
   position: relative;
@@ -1289,6 +1387,48 @@ section {
   }
   & > div {
     margin-bottom: 30px;
+  }
+}
+
+.supportMini {
+  &__title {
+    font-size: $fontSize_name;
+    color: $color_main;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__phone {
+    font-size: $fontSize_title;
+    color: $color_main;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+  }
+  &__hint {
+    font-size: $fontSize_small;
+    color: $color_hints;
+    text-align: center;
+    display: block;
+  }
+}
+
+.whyUsModal {
+  &__text {
+    display: flex;
+    align-items: center;
+  }
+  &__number {
+    display: block;
+    font-size: $fontSize_title;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffff;
+    background-color: $fon_green;
+    margin-right: 15px;
   }
 }
 
@@ -1846,6 +1986,115 @@ section {
   }
 }
 
+.cabinetPage {
+  &__selectBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select-container {
+    width: 30%;
+  }
+
+  &__passwordChange-button {
+    opacity: 0.7;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__passwordBlock {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  &__desk {
+    display: none;
+  }
+  .saveButton {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.authTabs {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d5d5d5;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  &__tab {
+    font-size: $fontSize_main;
+    color: $color_second;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  &__tab.active-tab {
+    font-size: $fontSize_title;
+    font-weight: 700;
+    color: $color_main;
+    text-decoration: none;
+    cursor: initial;
+  }
+
+  &__social {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    &-button {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item {
+    display: none;
+  }
+
+  &__item.active-tab {
+    display: block;
+  }
+
+  &__border {
+    border-bottom: 1px solid #d5d5d5;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__border-txt {
+    width: 50px;
+    background-color: #ffff;
+    text-align: center;
+    font-size: $fontSize_small;
+    color: $color_hints;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -8px;
+    margin: auto;
+    z-index: 2;
+  }
+
+  &__form {
+    margin-bottom: 30px;
+  }
+
+  &__form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .margBottom {
+    margin-bottom: 30px;
+  }
+}
+
 .center {
   text-align: center;
 }
@@ -2124,6 +2373,71 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: 60px;
+  }
+
+  .cabinetPage {
+    &__desk {
+      display: block;
+      min-width: 300px;
+    }
+
+    form {
+      max-width: 600px;
+      margin-left: 20px;
+      padding-bottom: 50px;
+    }
+
+    .cabinet {
+      &__avatar {
+        width: 60px;
+        height: 60px;
+      }
+      &__item {
+        border: 0;
+        font-size: $fontSize_main;
+        position: relative;
+        padding: 10px 15px;
+        margin: 5px 0;
+
+        &:hover {
+          color: $color_second;
+
+          &:before {
+            display: block;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 3px;
+          left: 0;
+          top: 0;
+          background-color: $fon_green;
+          z-index: 1;
+          display: none;
+        }
+      }
+      &__item.active {
+        color: $color_second;
+
+        &::before {
+          display: block;
+        }
+      }
+      &__item span:last-child {
+        display: none;
+      }
+      &__bloc {
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      &__bloc-title {
+        display: none;
+      }
+    }
   }
 }
 

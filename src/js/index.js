@@ -8,7 +8,19 @@ document.addEventListener('DOMContentLoaded', function () {
           menu = document.getElementById('menu'),
           headerButton = document.querySelectorAll('.header__button'),
           closeMenuButton = document.getElementById('closeMenu'),
-          headerBack = document.querySelectorAll('.header__back');
+          headerBack = document.querySelectorAll('.header__back'),
+          headerCabinet = document.getElementById('headerCabinet'),
+          headerCabinetButton = document.getElementById('headerCabinetButton'),
+          closeCabinetButton = document.getElementById('closeCabinet');
+
+    function openCabinet() {
+      body.classList.add('hiddenCabinet');
+      headerCabinet.style.transform = "translateX(0)";
+    }
+    function closeCabinet() {
+      body.classList.remove('hiddenCabinet');
+      headerCabinet.style.transform = "translateX(-110vw)";
+    }
 
     const openMenu = (e) => {
       if(e.target.classList.contains('burgerOpen')) {
@@ -40,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
     burger.addEventListener("click", openMenu);
     closeMenuButton.addEventListener("click", closeMenu);
 
+    headerCabinetButton.addEventListener("click", openCabinet);
+    closeCabinetButton.addEventListener("click", closeCabinet);
+
     // close menu on click outside menu
 
     document.addEventListener("click", (e) => {
@@ -47,6 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
       
       if(e.target !== burger && !isClickInside && burger.classList.contains('burgerOpen')) {
         closeMenu();
+      }
+    })
+
+
+    // close cabinet on click outside menu
+
+    document.addEventListener("click", (e) => {
+      let isClickInside = headerCabinet.contains(e.target);
+      if(!headerCabinetButton.contains(e.target) && !isClickInside) {
+        closeCabinet();
       }
     })
   })();
@@ -261,24 +286,30 @@ document.addEventListener('DOMContentLoaded', function () {
       if(e.target.getAttribute("data-toggle") === 'modal') {
         const id = e.target.getAttribute('data-target');
         openModal(id);
+      } else if(e.target.closest('[data-toggle="modal"')) {
+        const id = e.target.closest('[data-toggle="modal"]').getAttribute('data-target');
+        openModal(id);
       } else {
         return
       }
-    })
+    });
 
     function openModal(id) {
+      closeModal();
       const target = document.getElementById(id),
             body = document.querySelector('body'),
-            node = document.createElement('div');
+            node = document.createElement('div'),
+            closeModalButton = target.querySelectorAll('[data-dismiss="modal"]');
 
-      body.classList.add('hidden');
+      body.classList.add('hiddenModal');
       body.appendChild(node);
       node.classList.add('backdrop');
       node.classList.add('show');
       target.classList.add('show');
       
+      closeOnClickBack(target);
 
-      target.addEventListener('click', closeModal);
+      closeModalButton.forEach(e => e.addEventListener('click', closeModal));
     }
 
     function closeModal() {
@@ -286,10 +317,54 @@ document.addEventListener('DOMContentLoaded', function () {
             modal = document.querySelectorAll('.modal'),
             body = document.querySelector('body');
 
-      body.classList.remove('hidden');
+      body.classList.remove('hiddenModal');
       modal.forEach(e => e.classList.remove('show'))
-      backdrop.remove();
+      backdrop && backdrop.remove();
     }
+
+    // click on backdrop hide modal
+    function closeOnClickBack (targetModal) {
+      targetModal.addEventListener('click', function(e) {
+        if(e.target === this) {
+          closeModal();
+        }
+      })
+    }
+  })();
+
+  //cabinet page 
+
+  (function(){
+    let passButton = document.getElementById('passwordChangeButton')
+
+    function togglePasswordBlock() {
+      
+      if(this.classList.contains('active')) {
+        this.nextElementSibling.style.height = "0";
+        this.classList.remove('active')
+      } else {
+        this.nextElementSibling.style.height = "auto";
+        this.classList.add('active')
+      }
+    }
+    passButton && passButton.addEventListener("click", togglePasswordBlock);
+  })();
+
+  // auth modal 
+
+  (function(){
+    const tabs = document.querySelectorAll('.authTabs__tab'),
+    containers = document.querySelectorAll('.authTabs__item');
+
+    
+
+    tabs.forEach(e => e.addEventListener("click", e => {
+      const targetId = e.target.getAttribute('data-target');
+      containers.forEach(e => e.classList.remove('active-tab'));
+      tabs.forEach(e => e.classList.remove('active-tab'));
+      document.getElementById(targetId).classList.add('active-tab');
+      e.target.classList.add('active-tab');
+    }))
   })();
 })
 
