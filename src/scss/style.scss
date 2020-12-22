@@ -199,7 +199,7 @@ iframe {
 
 .input-group {
   margin-bottom: 20px;
-  input {
+  textarea, input {
     border: 1px solid $color_border_input;
     color: $color_input;
     line-height: $height_input;
@@ -211,6 +211,9 @@ iframe {
       outline: none;
       border: 1px solid $color_input-focus;
     }
+  }
+  textarea {
+    line-height: $fontSize_name;
   }
   label {
     margin-bottom: 5px;
@@ -1390,6 +1393,40 @@ section {
   }
 }
 
+.orderSteps {
+
+  &__header {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: $fontSize_small;
+    color: $color_hints;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  &__number {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: $color_hints;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 20px;
+  }
+  &__item.active {
+    color: $color_second;
+    border-bottom: 2px solid $color_second;
+  }
+  &__item.active &__number {
+    background-color: $fon_green;
+  }
+}
+
 .supportMini {
   &__title {
     font-size: $fontSize_name;
@@ -2092,6 +2129,13 @@ section {
 
   .margBottom {
     margin-bottom: 30px;
+  }
+}
+
+.becameExpertPage {
+
+  &__support-inner {
+    max-width: 100%;
   }
 }
 
