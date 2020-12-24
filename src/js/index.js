@@ -366,5 +366,22 @@ document.addEventListener('DOMContentLoaded', function () {
       e.target.classList.add('active-tab');
     }))
   })();
+
+  // accordeon 
+
+  (function(){
+    const accordeonItems = document.querySelectorAll('.accordeon__item');
+
+    accordeonItems.forEach(e => e.addEventListener('click', openAccordeon));
+
+    function openAccordeon() {
+      if(this.classList.contains('open')) {
+        this.classList.remove('open');
+      } else {
+        accordeonItems.forEach(e => e.classList.remove('open'));
+        this.classList.add('open');
+      }
+    }
+  })();
 })
 
