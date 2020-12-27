@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // filter 
 
   (function(){
-    if(document.getElementById('filter')) {
+    if(document.getElementById('filter') || document.getElementById('sort')) {
       const filterButton = document.getElementById('filterButton'),
             filterButtonsContainer = document.getElementById('filterButtonsContainer'),
             top = filterButtonsContainer.offsetTop,
@@ -129,11 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
               
       };
-
-      function openFilter() {
-        filterContainer.setAttribute('style','opacity: 1; transform: translateY(0)');
-        body.classList.add('hidden');
-      }
+      
 
       function openSort() {
         sortContainer.setAttribute('style','opacity: 1; transform: translateY(0)');
@@ -164,20 +160,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
-      // open filter
-      filterButton.addEventListener('click', openFilter);
+      if(filterButton) {
+
+        // open filter
+        filterButton.addEventListener('click', openFilter);
+
+        //close filter
+        closeFilterButton.addEventListener('click', closeFilter);
+
+        // Reset Filter form 
+        clearFormFilter.addEventListener('click', () => formFilter.reset());
+
+        document.addEventListener("click", (e) => {
+          let isClickInside = filterContainer.contains(e.target);
+          
+          if (e.target !== filterButton && !isClickInside) {
+            closeFilter();
+          }
+        })
+      }
+
 
       // open sort
       sortButton.addEventListener('click', openSort);
       
-      //close filter
-      closeFilterButton.addEventListener('click', closeFilter);
+
       
       //close sort
       closeSortButton.addEventListener('click', closeSort);
       
-      // Reset Filter form 
-      clearFormFilter.addEventListener('click', () => formFilter.reset());
+
       
       // Show more items
       showMoreButton.forEach(e => e.addEventListener('click', showMore));
@@ -186,16 +198,11 @@ document.addEventListener('DOMContentLoaded', function () {
       // close menu on click outside menu
 
       document.addEventListener("click", (e) => {
-        let isClickInside = filterContainer.contains(e.target),
-            isClickInsideSort = sortContainer.contains(e.target);
+        let isClickInsideSort = sortContainer.contains(e.target);
         
         if(e.target !== sortButton && !isClickInsideSort) {
           closeSort();
         } 
-        
-        if (e.target !== filterButton && !isClickInside) {
-          closeFilter();
-        }
       })
 
     }

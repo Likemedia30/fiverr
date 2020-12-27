@@ -266,6 +266,11 @@ select {
   }
 }
 
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .button {
   background-color: $fon_button;
   color: $color_button;
@@ -494,6 +499,10 @@ select {
   font-size: $fontSize_main;
   margin-bottom: 10px;
   font-weight: 400;
+}
+
+.text.red {
+  color: $color_alert;
 }
 
 .hint {

@@ -8,28 +8,189 @@ _.template(require('./../includes/header.html').default)(data) %>
         <div class="col-12">
           <h1 class="cabinetPage__title title">Manage Orders</h1>
         </div>
+        <div
+          class="col-12 cabinetPage__filter-buttons filter__buttons-container"
+          id="filterButtonsContainer"
+        >
+          <button id="sortButton" class="sortButton">
+            <div class="sortButton__icon">
+              <i class="fas fa-sort"></i>
+            </div>
+            Sort By
+          </button>
+        </div>
       </div>
       <div class="row">
         <div class="col-auto cabinetPage__desk">
           <%= _.template(require('./../includes/cabinet.html').default)(data) %>
         </div>
         <div class="col">
-          <div class="row">
-            <div class="col-12">
-              <div class="order">
-                <div class="order__header">
-                  <a href="#" class="order__header-image">
-                    <img src="https://genesis-stars.com/upload/iblock/46a/46a7a1a944566bb27524ad168f6488f3.jpg" alt="">
-                  </a>
-                  <div class="order__right">
-                    <div class="order__price">
-                      40 $
-                    </div>
-                    <a href="#" class="order__name">
-                      Translate english to dutch
-                    </a>
+          <div class="order">
+            <a href="order-one.html" class="order__header">
+              <div class="order__image">
+                <img
+                  src="https://genesis-stars.com/upload/iblock/46a/46a7a1a944566bb27524ad168f6488f3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="order__right">
+                <div class="order__price">
+                  40 $
+                </div>
+                <div class="order__name">
+                  Translate english to dutch
+                </div>
+              </div>
+            </a>
+            <div class="order__body">
+              <a href="one-product.html" class="order__user user">
+                <div class="order__avatar user__avatar">
+                  <img
+                    src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                    alt=""
+                  />
+                  <div class="user__status online"></div>
+                </div>
+                <div class="user__info">
+                  <div class="user__name">
+                    Natalia Zlata
                   </div>
                 </div>
+              </a>
+            </div>
+            <div class="order__footer">
+              <div class="order__date">
+                Jan 2, 2020
+              </div>
+              <div class="order__status completed">
+                completed
+              </div>
+            </div>
+          </div>
+          <div class="order">
+            <a href="order-one.html" class="order__header">
+              <div class="order__image">
+                <img
+                  src="https://genesis-stars.com/upload/iblock/46a/46a7a1a944566bb27524ad168f6488f3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="order__right">
+                <div class="order__price">
+                  40 $
+                </div>
+                <div class="order__name">
+                  Translate english to dutch asfa sdfasfasdf adsfa dasf dsf
+                </div>
+              </div>
+            </a>
+            <div class="order__body">
+              <a href="one-product.html" class="order__user user">
+                <div class="order__avatar user__avatar">
+                  <img
+                    src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                    alt=""
+                  />
+                  <div class="user__status"></div>
+                </div>
+                <div class="user__info">
+                  <div class="user__name">
+                    Natalia Zlata
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="order__footer">
+              <div class="order__date">
+                Jan 2, 2020
+              </div>
+              <div class="order__status completed">
+                completed
+              </div>
+            </div>
+          </div>
+          <div class="order">
+            <a href="order-one.html" class="order__header">
+              <div class="order__image">
+                <img
+                  src="https://genesis-stars.com/upload/iblock/46a/46a7a1a944566bb27524ad168f6488f3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="order__right">
+                <div class="order__price">
+                  40 $
+                </div>
+                <div class="order__name">
+                  Translate english to dutch
+                </div>
+              </div>
+            </a>
+            <div class="order__body">
+              <a href="one-product.html" class="order__user user">
+                <div class="order__avatar user__avatar">
+                  <img
+                    src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                    alt=""
+                  />
+                  <div class="user__status online"></div>
+                </div>
+                <div class="user__info">
+                  <div class="user__name">
+                    Natalia Zlata
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="order__footer">
+              <div class="order__date">
+                Jan 2, 2020
+              </div>
+              <div class="order__status completed">
+                completed
+              </div>
+            </div>
+          </div>
+          <div class="order">
+            <a href="order-one.html" class="order__header">
+              <div class="order__image">
+                <img
+                  src="https://genesis-stars.com/upload/iblock/46a/46a7a1a944566bb27524ad168f6488f3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="order__right">
+                <div class="order__price">
+                  40 $
+                </div>
+                <div class="order__name">
+                  Translate english to dutch asfa sdfasfasdf adsfa dasf dsf
+                  asfasfd sdfasssfdas
+                </div>
+              </div>
+            </a>
+            <div class="order__body">
+              <a href="one-product.html" class="order__user user">
+                <div class="order__avatar user__avatar">
+                  <img
+                    src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                    alt=""
+                  />
+                  <div class="user__status"></div>
+                </div>
+                <div class="user__info">
+                  <div class="user__name">
+                    Natalia Zlata
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="order__footer">
+              <div class="order__date">
+                Jan 2, 2020
+              </div>
+              <div class="order__status completed">
+                completed
               </div>
             </div>
           </div>
@@ -115,6 +276,81 @@ _.template(require('./../includes/header.html').default)(data) %>
       </button>
     </div>
   </section>
+
+  <!-- sort orders -->
+
+  <div id="sort" class="filter">
+    <form class="filter__inner">
+      <div class="filter__option">
+        <div class="filter__option-title">
+          <span>Sort by</span>
+          <span id="closeSort">&times;</span>
+        </div>
+        <div class="filter__check-container">
+          <label class="checkContainer">
+            Completed
+            <input type="checkbox" name="statusSeller" />
+            <span class="checkContainer__mark">
+              <svg
+                style="fill:currentColor"
+                width="11"
+                height="9"
+                viewBox="0 0 11 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                ></path>
+              </svg>
+            </span>
+          </label>
+        </div>
+        <div class="filter__check-container">
+          <label class="checkContainer">
+            Processing
+            <input type="checkbox" name="statusSeller" />
+            <span class="checkContainer__mark">
+              <svg
+                style="fill:currentColor"
+                width="11"
+                height="9"
+                viewBox="0 0 11 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                ></path>
+              </svg>
+            </span>
+          </label>
+        </div>
+        <div class="filter__check-container">
+          <label class="checkContainer">
+            Newest Arrivals
+            <input type="checkbox" name="statusSeller" />
+            <span class="checkContainer__mark">
+              <svg
+                style="fill:currentColor"
+                width="11"
+                height="9"
+                viewBox="0 0 11 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                ></path>
+              </svg>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="filter__footer">
+        <button class="button" type="submit">
+          Show Results
+        </button>
+      </div>
+    </form>
+  </div>
 </main>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %> <%=

@@ -6,7 +6,7 @@ _.template(require('./../includes/header.html').default)(data) %>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="cabinetPage__title title">Накопленные бонусы</h1>
+          <h1 class="cabinetPage__title title">Order One</h1>
         </div>
       </div>
       <div class="row">
@@ -14,74 +14,139 @@ _.template(require('./../includes/header.html').default)(data) %>
           <%= _.template(require('./../includes/cabinet.html').default)(data) %>
         </div>
         <div class="col">
-          <p class="text cabinetPage__greenBack">
-            Накапливайте бесплатные бонусные минуты* для консультации по
-            телефону.
-          </p>
-          <p class="text red">
-            * Вы сможете использовать бесплатные бонусные минуты после того, как
-            накопите 5 и более минут.
-          </p>
-          <div class="cabinetPage__bonus">
-            <div class="cabinetPage__bonus-bloc">
-              <h3 class="sub-title">
-                Вами накоплено бонусных минут:
-              </h3>
-              <div class="cabinetPage__time">
-                <span class="cabinetPage__time-minutes">
-                  <span class="cabinetPage__time-number">0</span>
-                  <span>min.</span>
+          <ul class="orderOne__accordeon accordeon">
+            <li class="orderOne__accordeon-item accordeon__item open">
+              <button
+                type="button"
+                class="orderOne__accordeon-button accordeon__button"
+              >
+                <h3 class="orderOne__accordeon-title accordeon__title">
+                  Modification Requested
+                </h3>
+                <span class="orderOne__accordeon-icon accordeon__icon">
+                  <i class="fas fa-chevron-down"></i>
                 </span>
-                <span class="cabinetPage__time-seconds">
-                  <span class="cabinetPage__time-number">0</span>
-                  <span>sec.</span>
-                </span>
+              </button>
+              <div class="accordeon__body">
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  <a href="#" class="link">Lorem ipsum dolor sit amet.</a> Cum,
+                  eum? Molestias mollitia nulla corrupti illo atque laborum
+                  earum doloremque iste.
+                </p>
+                <ul class="accordeon__list text">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem, ipsum dolor.</li>
+                </ul>
+                <p class="text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Temporibus obcaecati aliquid amet ratione magnam sapiente?
+                </p>
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  eum? Molestias mollitia nulla corrupti illo atque laborum
+                  earum doloremque iste.
+                </p>
+                <ul class="accordeon__list text">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem, ipsum dolor.</li>
+                </ul>
+                <p class="text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Temporibus obcaecati aliquid amet ratione magnam sapiente?
+                </p>
               </div>
-              <a href="#" class="button disabled">
-                Get bonus
-              </a>
-            </div>
-            <div class="cabinetPage__bonus-bloc">
-              <h3 class="sub-title">
-                До бонусной консультации осталось накопить:
-              </h3>
-              <div class="cabinetPage__time">
-                <span class="cabinetPage__time-minutes">
-                  <span class="cabinetPage__time-number">5</span>
-                  <span>min.</span>
+            </li>
+            <li class="orderOne__accordeon-item accordeon__item">
+              <button
+                type="button"
+                class="orderOne__accordeon-button accordeon__button"
+              >
+                <h3 class="orderOne__accordeon-title accordeon__title">
+                  Here is your delivery
+                </h3>
+                <span class="orderOne__accordeon-icon accordeon__icon">
+                  <i class="fas fa-chevron-down"></i>
                 </span>
-                <span class="cabinetPage__time-seconds">
-                  <span class="cabinetPage__time-number">0</span>
-                  <span>sec.</span>
-                </span>
+              </button>
+              <div class="accordeon__body">
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  eum? Molestias mollitia nulla corrupti illo atque laborum
+                  earum doloremque iste.
+                </p>
+                <ul class="accordeon__list text">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem, ipsum dolor.</li>
+                </ul>
+                <p class="text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Temporibus obcaecati aliquid amet ratione magnam sapiente?
+                </p>
               </div>
-            </div>
-          </div>
-          <h3 class="sub-title">
-            Подробнее о бонусной программе Genesis-Stars.com
-          </h3>
-
-          <p class="text">
-            Чем больше Вы консультируйтесь с экспертами, тем больше бонусов Вам
-            начисляется.
-          </p>
-          <p class="text">
-            Система автоматически проводит начисление бонусных минут на Ваш счет
-            в то время, как Вы консультируйтесь с экспертами, общаетесь в
-            платном чате или заказываете услугу.
-          </p>
-          <p class="text">1 гривна = 0.06 бонусных секунд;</p>
-          <p class="text">100 гривен = 6 бонусных секунд;</p>
-          <p class="text">1000 гривен = 1 бонусная минута.</p>
-          <p class="text">
-            Вы можете начать использовать бонусные минуты, когда их будет не
-            меньше 5 — этого времени будет достаточно для бесплатной
-            консультации от эксперта.
-          </p>
-          <p class="text">
-            Для того чтобы использовать бонусные минуты, просто нажмите на
-            кнопку "Использовать бонусы" и закажите звонок с экспетром.
-          </p>
+            </li>
+            <li class="orderOne__accordeon-item accordeon__item">
+              <button
+                type="button"
+                class="orderOne__accordeon-button accordeon__button"
+              >
+                <h3 class="orderOne__accordeon-title accordeon__title">
+                  Order Created
+                </h3>
+                <span class="orderOne__accordeon-icon accordeon__icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </button>
+              <div class="accordeon__body">
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  eum? Molestias mollitia nulla corrupti illo atque laborum
+                  earum doloremque iste.
+                </p>
+                <ul class="accordeon__list text">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem, ipsum dolor.</li>
+                </ul>
+                <p class="text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Temporibus obcaecati aliquid amet ratione magnam sapiente?
+                </p>
+              </div>
+            </li>
+            <li class="orderOne__accordeon-item accordeon__item">
+              <button
+                type="button"
+                class="orderOne__accordeon-button accordeon__button"
+              >
+                <h3 class="orderOne__accordeon-title accordeon__title">
+                  General account management
+                </h3>
+                <span class="orderOne__accordeon-icon accordeon__icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </button>
+              <div class="accordeon__body">
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  eum? Molestias mollitia nulla corrupti illo atque laborum
+                  earum doloremque iste.
+                </p>
+                <ul class="accordeon__list text">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem, ipsum dolor.</li>
+                </ul>
+                <p class="text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Temporibus obcaecati aliquid amet ratione magnam sapiente?
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
