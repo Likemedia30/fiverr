@@ -1,0 +1,141 @@
+
+.cabinetPage {
+  &__charge-payment {
+    margin-bottom: 30px;
+  }
+  &__charge-button {
+    margin-top: 30px;
+    width: 100%;
+  }
+  &__charge-select-container {
+    margin-bottom: 20px;
+  }
+  &__charge-input {
+    display: none;
+  }
+  &__borderBottom {
+    padding-bottom: 20px;
+  }
+  &__support {
+    margin-top: 40px;
+  }
+  &__selectBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select-container {
+    width: 30%;
+  }
+
+  &__passwordChange-button {
+    opacity: 0.7;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__passwordBlock {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  &__desk {
+    display: none;
+  }
+
+  &__subscribes-checkContainer {
+    margin-bottom: 10px;
+  }
+
+  &__subscribes {
+    border-bottom: 1px solid $color_border_input;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__subscribes-button {
+    margin-bottom: 10px;
+  }
+  .saveButton {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 991px) {
+
+  .cabinetPage {
+    &__charge-payment {
+      display: flex;
+      justify-content: space-between;
+
+      .paymentMethodsCheck {
+        width: 48%;
+      }
+    }
+    &__desk {
+      display: block;
+      min-width: 300px;
+    }
+
+    form {
+      max-width: 600px;
+      margin-left: 20px;
+      padding-bottom: 50px;
+    }
+
+    .cabinet {
+      &__avatar {
+        width: 60px;
+        height: 60px;
+      }
+      &__item {
+        border: 0;
+        font-size: $fontSize_main;
+        position: relative;
+        padding: 10px 15px;
+        margin: 5px 0;
+
+        &:hover {
+          color: $color_second;
+
+          &:before {
+            display: block;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 3px;
+          left: 0;
+          top: 0;
+          background-color: $fon_green;
+          z-index: 1;
+          display: none;
+        }
+      }
+      &__item.active {
+        color: $color_second;
+
+        &::before {
+          display: block;
+        }
+      }
+      &__item span:last-child {
+        display: none;
+      }
+      &__bloc {
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      &__bloc-title {
+        display: none;
+      }
+    }
+  }
+}
