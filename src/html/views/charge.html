@@ -6,7 +6,7 @@ _.template(require('./../includes/header.html').default)(data) %>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="cabinetPage__title title">My Photo</h1>
+          <h1 class="cabinetPage__title title">Пополнить счет</h1>
         </div>
       </div>
       <div class="row">
@@ -16,7 +16,109 @@ _.template(require('./../includes/header.html').default)(data) %>
         <div class="col">
           <form class="row">
             <div class="col-12">
-              <p class="text">Your photo</p>
+              <div class="cabinetPage__borderBottom borderBottom">
+                <h3 class="sub-title">Приветствуем Вас, Iov!</h3>
+                <p class="text">
+                  Для того чтобы воспользоваться услугами Genesis Stars, Вам
+                  необходимо пополнить счет.
+                </p>
+                <p class="text">
+                  Для пополнения счета укажите сумму пополнения и выберите метод
+                  оплаты.
+                </p>
+              </div>
+              <h3 class="sub-title">Укажите сумму пополнения</h3>
+              <form action="">
+                <div
+                  class="cabinetPage__charge-select-container select-container"
+                >
+                  <select name="" id="">
+                    <option value="200">200</option>
+                    <option value="200">500</option>
+                    <option value="200">1000</option>
+                    <option value="200">5000</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="input-group cabinetPage__charge-input">
+                  <input type="text" name="otherSum" />
+                </div>
+                <h3 class="sub-title">
+                  Выберите метод оплаты
+                </h3>
+                <div class="cabinetPage__charge-payment">
+                  <div class="paymentMethodsCheck">
+                    <label class="checkContainer">
+                      Paypal
+                      <input type="radio" name="statusSeller" />
+                      <span class="checkContainer__mark">
+                        <svg
+                          style="fill:currentColor"
+                          width="11"
+                          height="9"
+                          viewBox="0 0 11 9"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <img
+                        src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png"
+                        alt=""
+                      />
+                    </label>
+                  </div>
+                  <div class="paymentMethodsCheck">
+                    <label class="checkContainer">
+                      Paypal
+                      <input type="radio" name="statusSeller" />
+                      <span class="checkContainer__mark">
+                        <svg
+                          style="fill:currentColor"
+                          width="11"
+                          height="9"
+                          viewBox="0 0 11 9"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <img
+                        src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png"
+                        alt=""
+                      />
+                    </label>
+                  </div>
+                </div>
+
+                <label class="checkContainer">
+                  Я принимаю условия
+                  <a href="#" class="link">пользовательского соглашения</a>
+                  <input type="checkbox" name="statusSeller" />
+                  <span class="checkContainer__mark">
+                    <svg
+                      style="fill:currentColor"
+                      width="11"
+                      height="9"
+                      viewBox="0 0 11 9"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+
+                <button type="button" class="button cabinetPage__charge-button">
+                  Charge
+                </button>
+              </form>
             </div>
           </form>
         </div>
