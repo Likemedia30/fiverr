@@ -176,7 +176,8 @@
 }
 
 .user,
-.notification {
+.notification,
+.message {
   display: flex;
   align-items: center;
 
@@ -246,6 +247,53 @@
   &.unread {
 
     .notification__name {
+      font-weight: 700;
+    }
+  }
+}
+
+.message {
+  padding: 15px 0;
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+
+  &__name {
+    color: $color_main;
+    font-size: $fontSize_name;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    width: 100%;
+  }
+
+  &__text {
+    overflow: hidden;
+    font-size: $fontSize_main;
+    line-height: $fontSize_main * 1.1;
+    height: $fontSize_main * 1.1 * 2;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  &__status {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__date {
+    color: $color_hints;
+    font-size: $fontSize_main;
+  }
+
+  &.unread {
+
+    .message__text {
       font-weight: 700;
     }
   }
