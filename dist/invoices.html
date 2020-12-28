@@ -50,6 +50,7 @@
                   <a href="messages.html" class="header__item">Мои сообщения</a>
                   <a href="notifications.html" class="header__item">Notifications</a>
                   <a href="#" class="header__item">Мои звонки</a>
+                  <a href="invoices.html" class="header__item">Invoices</a>
                   <a href="#" class="header__item">Мои чаты</a>
                   <a href="#" class="header__item">Подписки</a>
                   <a href="expert-step-2.html" class="header__item">Devino Expert</a>
@@ -390,7 +391,7 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <h1 class="cabinetPage__title title">Personal Info</h1>
+                <h1 class="cabinetPage__title title">Invoices</h1>
               </div>
             </div>
             <div class="row">
@@ -517,107 +518,120 @@
                 </div>
               </div>
               <div class="col">
-                <form class="row">
-                  <div class="col-lg-6 col-12">
-                    <div class="input-group">
-                      <label for="name">Name</label>
-                      <input name="name" id="name" type="text" value="Iov" />
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <div class="input-group">
-                      <label for="lastName">Last Name</label>
-                      <input type="text" id="lastName" name="lastName" value="Albu" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="" style="margin-bottom: 10px; display:block;">Gender</label>
-                    <div class="input-group radio-group">
-                      <label class="radio-strd">
-                        Male
-                        <input type="radio" name="gender" />
-                        <span class="radio-strd__mark"></span>
-                      </label>
-                      <label class="radio-strd">
-                        Female
-                        <input type="radio" name="gender" />
-                        <span class="radio-strd__mark"></span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="">ДАТА РОЖДЕНИЯ</label>
-                      <div class="cabinetPage__selectBlock">
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Day</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Month</option>
-                            <option value="1">January</option>
-                            <option value="2">February</option>
-                            <option value="3">March</option>
-                            <option value="4">April</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Year</option>
-                            <option value="default">2000</option>
-                            <option value="default">2001</option>
-                            <option value="default">2003</option>
-                            <option value="default">2004</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
+                <ul class="invoice__accordeon accordeon">
+                  <li class="invoice__accordeon-item accordeon__item open">
+                    <button type="button" class="invoice__accordeon-button accordeon__button">
+                      <h3 class="invoice__accordeon-title accordeon__title">
+                        2 feb, 2020
+                      </h3>
+                      <span class="invoice__accordeon-balance">Ending balance: $30</span>
+                      <span class="invoice__accordeon-icon accordeon__icon">
+                        <i class="fas fa-chevron-down"></i>
+                      </span>
+                    </button>
+                    <div class="accordeon__body">
+                      <div class="invoice__item invoice__documents">
+                        Documents (2)
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">CSV Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          120321903 (created: 12/03/2020)
+                        </a>
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">PDF Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          12032231903 (created: 12/03/2020)
+                        </a>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="phone">Phone</label>
-                      <input type="text" id="phone" name="phone" value="+37368706774" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="email">Email</label>
-                      <input type="text" id="email" name="email" value="+37368706774" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="password">Your password</label>
-                      <button type="button" class="cabinetPage__passwordChange-button" id="passwordChangeButton">
-                        <i class="fas fa-lock"></i>
-                        <span>Change Password</span>
-                      </button>
-
-                      <div class="cabinetPage__passwordBlock">
-                        <div class="input-group">
-                          <label for="password">New Password</label>
-                          <input type="password" id="password" name="password" value="asfsflsekseiojfs" />
-                        </div>
-                        <div class="input-group">
-                          <label for="reppassword">Repeat Password</label>
-                          <input type="password" id="reppassword" name="reppassword" value="asfsflsekseiojfs" />
-                        </div>
+                  </li>
+                  <li class="invoice__accordeon-item accordeon__item">
+                    <button type="button" class="invoice__accordeon-button accordeon__button">
+                      <h3 class="invoice__accordeon-title accordeon__title">
+                        10 mar, 2018
+                      </h3>
+                      <span class="invoice__accordeon-balance">Ending balance: $450</span>
+                      <span class="invoice__accordeon-icon accordeon__icon">
+                        <i class="fas fa-chevron-down"></i>
+                      </span>
+                    </button>
+                    <div class="accordeon__body">
+                      <div class="invoice__item invoice__documents">
+                        Documents (2)
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">CSV Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          120321903 (created: 12/03/2020)
+                        </a>
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">PDF Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          12032231903 (created: 12/03/2020)
+                        </a>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <button type="submit" class="saveButton button">Save</button>
-                  </div>
-                </form>
+                  </li>
+                  <li class="invoice__accordeon-item accordeon__item">
+                    <button type="button" class="invoice__accordeon-button accordeon__button">
+                      <h3 class="invoice__accordeon-title accordeon__title">
+                        25 dec, 2020
+                      </h3>
+                      <span class="invoice__accordeon-balance">Ending balance: $0</span>
+                      <span class="invoice__accordeon-icon accordeon__icon">
+                        <i class="fas fa-chevron-down"></i>
+                      </span>
+                    </button>
+                    <div class="accordeon__body">
+                      <div class="invoice__item invoice__documents">
+                        Documents (2)
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">CSV Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          120321903 (created: 12/03/2020)
+                        </a>
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">PDF Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          12032231903 (created: 12/03/2020)
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="invoice__accordeon-item accordeon__item">
+                    <button type="button" class="invoice__accordeon-button accordeon__button">
+                      <h3 class="invoice__accordeon-title accordeon__title">
+                        2 feb, 2020
+                      </h3>
+                      <span class="invoice__accordeon-balance">Ending balance: $30</span>
+                      <span class="invoice__accordeon-icon accordeon__icon">
+                        <i class="fas fa-chevron-down"></i>
+                      </span>
+                    </button>
+                    <div class="accordeon__body">
+                      <div class="invoice__item invoice__documents">
+                        Documents (2)
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">CSV Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          120321903 (created: 12/03/2020)
+                        </a>
+                      </div>
+                      <div class="invoice__item">
+                        <div class="invoice__item-name">PDF Invoice (1)</div>
+                        <a href="#" download class="invoice__item invoice__item-link">
+                          12032231903 (created: 12/03/2020)
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

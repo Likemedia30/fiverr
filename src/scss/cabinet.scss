@@ -299,7 +299,51 @@
   }
 }
 
+.invoice {
+
+  &__item {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__documents {
+    font-size: $fontSize_name;
+    margin-top: 20px;
+  }
+
+  &__item-link,
+  &__item-name {
+    font-size: $fontSize_small;
+  }
+
+  &__item-link {
+    color: $color_additional
+  }
+
+  &__accordeon-title {
+    position: relative;
+    align-items: center;
+  }
+
+  &__accordeon-icon {
+    position: absolute;
+    right: 15px;
+  }
+
+  &__accordeon-balance {
+    padding-right: 30px;
+    font-size: $fontSize_main;
+    color: $color_hints;
+  }
+}
+
 @media (min-width: 991px) {
+  .invoice {
+
+    &__documents {
+      margin-top: 0;
+    }
+  }
   .cabinetPage {
     &__bonus {
       display: flex;

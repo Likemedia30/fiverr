@@ -50,6 +50,7 @@
                   <a href="messages.html" class="header__item">Мои сообщения</a>
                   <a href="notifications.html" class="header__item">Notifications</a>
                   <a href="#" class="header__item">Мои звонки</a>
+                  <a href="invoices.html" class="header__item">Invoices</a>
                   <a href="#" class="header__item">Мои чаты</a>
                   <a href="#" class="header__item">Подписки</a>
                   <a href="expert-step-2.html" class="header__item">Devino Expert</a>
@@ -385,112 +386,165 @@
         </div>
       </header>
 
-      <main class="becameExpertPage">
+      <main class="checkout">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="title">CHECKOUT</h1>
+            </div>
+          </div>
+        </div>
         <section>
           <div class="container">
             <div class="row">
-              <div class="col-12">
-                <h1 class="title center">Welcom to Fiverr</h1>
+              <div class="col-lg col-12">
+                <h3 class="checkout__payments-title sub-title">
+                  Payment Methods
+                </h3>
+                <div class="checkout__payments">
+                  <div class="paymentMethodsCheck">
+                    <label class="checkContainer">
+                      Paypal
+                      <input type="radio" name="statusSeller" />
+                      <span class="checkContainer__mark">
+                        <svg
+                          style="fill:currentColor"
+                          width="11"
+                          height="9"
+                          viewBox="0 0 11 9"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="" />
+                    </label>
+                  </div>
+                  <div class="paymentMethodsCheck">
+                    <label class="checkContainer">
+                      Paypal
+                      <input type="radio" name="statusSeller" />
+                      <span class="checkContainer__mark">
+                        <svg
+                          style="fill:currentColor"
+                          width="11"
+                          height="9"
+                          viewBox="0 0 11 9"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="" />
+                    </label>
+                  </div>
+                  <div class="checkout__check-container">
+                    <label class="checkContainer">
+                      Viza
+                      <input type="radio" name="statusSeller" />
+                      <span class="checkContainer__mark">
+                        <svg
+                          style="fill:currentColor"
+                          width="11"
+                          height="9"
+                          viewBox="0 0 11 9"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"
+                          ></path>
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <h3 class="sub-title">
+                  Package
+                </h3>
+                <div class="checkout__service">
+                  <div class="checkout__service-image image-container">
+                    <img
+                      src="https://fiverr-res.cloudinary.com/t_mobile_web_2,q_auto,f_auto/gigs/18513109/original/f0d744d79af6fb281ffb4a10d417a300ecb5a37f.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="checkout__service-right">
+                    <a href="one-product.html" class="checkout__service-name">
+                      Constantin Constantin
+                    </a>
+                  </div>
+                </div>
+                <div class="checkout__package">
+                  <div class="checkout__package-name sub-title">
+                    <span>Bronze Package</span>
+                    <span>40 $</span>
+                  </div>
+                  <ul class="checkout__package-list text">
+                    <li>
+                      <i class="fa fa-check"></i>
+                      <span>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-check"></i>
+                      <span>Lorem ipsum dolor sit amet.</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-check"></i>
+                      <span
+                        >Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                        praesentium officiis vel odio doloribus ullam?</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fa fa-check"></i>
+                      <span>Lorem ipsum dolor sit amet.</span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-check"></i>
+                      <span>Lorem ipsum dolor sit amet.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-9">
-                <form class="row">
-                  <div class="col-lg-6 col-12">
+              <div class="col-lg-auto col-12">
+                <section class="orderDetails">
+                  <form class="orderDetails__sticky">
+                    <p class="orderDetails__sub-title sub-title">Order Details</p>
                     <div class="input-group">
-                      <label for="name">Name</label>
-                      <input name="name" id="name" type="text" value="Iov" />
+                      <label for="promo">Enter promo code</label>
+                      <input type="text" />
                     </div>
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <div class="input-group">
-                      <label for="lastName">Last Name</label>
-                      <input type="text" id="lastName" name="lastName" value="Albu" />
+                    <div class="orderDetails__bloc text">
+                      <span>Service fee</span>
+                      <span>2 $</span>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="" style="margin-bottom: 10px; display:block;">Gender</label>
-                    <div class="input-group radio-group">
-                      <label class="radio-strd">
-                        Male
-                        <input type="radio" name="gender" />
-                        <span class="radio-strd__mark"></span>
-                      </label>
-                      <label class="radio-strd">
-                        Female
-                        <input type="radio" name="gender" />
-                        <span class="radio-strd__mark"></span>
-                      </label>
+                    <div class="orderDetails__total text orderDetails__bloc">
+                      <span>Total</span>
+                      <span>120 $</span>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="">ДАТА РОЖДЕНИЯ</label>
-                      <div class="cabinetPage__selectBlock">
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Day</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Month</option>
-                            <option value="1">January</option>
-                            <option value="2">February</option>
-                            <option value="3">March</option>
-                            <option value="4">April</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Year</option>
-                            <option value="default">2000</option>
-                            <option value="default">2001</option>
-                            <option value="default">2003</option>
-                            <option value="default">2004</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                      </div>
+                    <div class="orderDetails__bloc text">
+                      <span>Total delivery time</span>
+                      <span>1 day</span>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="phone">Phone</label>
-                      <input type="text" id="phone" name="phone" value="+37368706774" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="email">Email</label>
-                      <input type="text" id="email" name="email" value="+37368706774" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <a href="#" class="link">Why we need this?</a>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <a href="expert-step-3.html" class="button">next</a>
-                    <!-- <button type="submit" class="button">Next</button> -->
-                  </div>
-                </form>
+                    <button type="button" class="orderDetails__button button">
+                      Confirm & Pay
+                    </button>
+                  </form>
+                </section>
               </div>
             </div>
           </div>
         </section>
-        <section class="support">
+        <section class="checkout__support support">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-9">
-                <div class="becameExpert__support-inner support__inner">
+              <div class="col-lg-7 col-md-10">
+                <div class="becameExpertPage__support-inner support__inner">
                   <h3 class="support__sub-title sub-title center">
                     У Вас еще есть вопросы?
                   </h3>

@@ -50,6 +50,7 @@
                   <a href="messages.html" class="header__item">Мои сообщения</a>
                   <a href="notifications.html" class="header__item">Notifications</a>
                   <a href="#" class="header__item">Мои звонки</a>
+                  <a href="invoices.html" class="header__item">Invoices</a>
                   <a href="#" class="header__item">Мои чаты</a>
                   <a href="#" class="header__item">Подписки</a>
                   <a href="expert-step-2.html" class="header__item">Devino Expert</a>
@@ -385,122 +386,244 @@
         </div>
       </header>
 
-      <main class="videocons">
-        <section class="videocons__banner">
+      <main class="cabinetPage">
+        <section>
           <div class="container">
             <div class="row">
-              <div class="col-lg-7 col-md-10 col-12">
-                <h1 class="videocons__title title">
-                  Голосовые консультации по телефону
-                </h1>
-                <h3 class="videocons__sub-title sub-title">
-                  Общайтесь с экспертами напрямую и получите ответы на волнующие Вас вопросы
-                </h3>
+              <div class="col-12">
+                <h1 class="cabinetPage__title title">Personal Info</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-auto cabinetPage__desk">
+                <div class="cabinet">
+                  <div class="cabinet__inner">
+                    <div class="cabinet__profile">
+                      <div class="cabinet__avatar">
+                        <img src="https://genesis-stars.com/local/assets/img/user_icon.png" alt="" />
+                      </div>
+                      <div class="cabinet__info">
+                        <div class="cabinet__name">Iov Albu</div>
+                        <p class="cabinet__wallet">На Вашем счету: <span>0 rub.</span></p>
+                      </div>
+                    </div>
+                    <div class="cabinet__bloc">
+                      <p class="cabinet__bloc-title">
+                        Settings
+                      </p>
+                      <a href="personal-info.html" class="cabinet__item active">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-user-alt"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          My profile and settings
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+
+                      <a href="my-photo.html" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-camera"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          My photo
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+                      <a href="my-subscribes.html" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-ellipsis-v"></i>
+                          <i class="fas fa-bars"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          My subscribe
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="cabinet__bloc">
+                      <p class="cabinet__bloc-title">
+                        Ваш личный счет
+                      </p>
+                      <a href="#" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-wallet"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          Выписка по счету
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+
+                      <a href="charge.html" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-money-bill-wave-alt"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          Пополнить счет
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+                      <a href="bonus.html" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-percentage"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          Накопленные бонусы
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="cabinet__bloc">
+                      <p class="cabinet__bloc-title">
+                        Дополнительные возможности
+                      </p>
+                      <a href="#" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-question-circle"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          Помощь
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+
+                      <a href="#" class="cabinet__item">
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-sign-out-alt"></i>
+                        </span>
+                        <span class="cabinet__item-name">
+                          Выйти
+                        </span>
+                        <span class="cabinet__item-icon">
+                          <i class="fas fa-chevron-right"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <form class="row">
+                  <div class="col-lg-6 col-12">
+                    <div class="input-group">
+                      <label for="name">Name</label>
+                      <input name="name" id="name" type="text" value="Iov" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="input-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" id="lastName" name="lastName" value="Albu" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="" style="margin-bottom: 10px; display:block;">Gender</label>
+                    <div class="input-group radio-group">
+                      <label class="radio-strd">
+                        Male
+                        <input type="radio" name="gender" />
+                        <span class="radio-strd__mark"></span>
+                      </label>
+                      <label class="radio-strd">
+                        Female
+                        <input type="radio" name="gender" />
+                        <span class="radio-strd__mark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <label for="">ДАТА РОЖДЕНИЯ</label>
+                      <div class="cabinetPage__selectBlock">
+                        <div class="cabinetPage__select-container select-container">
+                          <select name="" id="">
+                            <option value="default">Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                          <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="cabinetPage__select-container select-container">
+                          <select name="" id="">
+                            <option value="default">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                          </select>
+                          <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="cabinetPage__select-container select-container">
+                          <select name="" id="">
+                            <option value="default">Year</option>
+                            <option value="default">2000</option>
+                            <option value="default">2001</option>
+                            <option value="default">2003</option>
+                            <option value="default">2004</option>
+                          </select>
+                          <i class="fas fa-caret-down"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <label for="phone">Phone</label>
+                      <input type="text" id="phone" name="phone" value="+37368706774" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <label for="email">Email</label>
+                      <input type="text" id="email" name="email" value="+37368706774" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <label for="password">Your password</label>
+                      <button type="button" class="cabinetPage__passwordChange-button" id="passwordChangeButton">
+                        <i class="fas fa-lock"></i>
+                        <span>Change Password</span>
+                      </button>
+
+                      <div class="cabinetPage__passwordBlock">
+                        <div class="input-group">
+                          <label for="password">New Password</label>
+                          <input type="password" id="password" name="password" value="asfsflsekseiojfs" />
+                        </div>
+                        <div class="input-group">
+                          <label for="reppassword">Repeat Password</label>
+                          <input type="password" id="reppassword" name="reppassword" value="asfsflsekseiojfs" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="saveButton button">Save</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </section>
-        <section class="videocons__content">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <h3 class="sub-title videocons__green">
-                  Основные шаги, чтобы получить консультацию
-                </h3>
-              </div>
-            </div>
-            <div class="row videosteps">
-              <div class="col-lg-4 col-md-6 col-12 videosteps__item">
-                <div class="videosteps__sub-title sub-title">
-                  Шаг № 1
-                </div>
-                <p class="videosteps__text text">
-                  <a href="#" class="link">Зарегистрируйтесь</a> на сайте или войдите в свой личный кабинет (если ранее
-                  Вы были зарегистрированы).
-                </p>
-                <div class="videosteps__image-container image-container">
-                  <img src="https://genesis-stars.com/local/assets/img/src.jpg" alt="" class="videosteps__image" />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-12 videosteps__item">
-                <div class="videosteps__sub-title sub-title">
-                  Шаг № 2
-                </div>
-                <p class="videosteps__text text">
-                  <a href="#" class="link">Пополните свой счет</a> в личном кабинете пользователя в разделе «Пополнить
-                  счет»
-                </p>
-                <div class="videosteps__image-container image-container">
-                  <img
-                    src="https://genesis-stars.com/local/assets/img/menu-call.jpg"
-                    alt=""
-                    class="videosteps__image"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-12 videosteps__item">
-                <div class="videosteps__sub-title sub-title">
-                  Шаг № 3
-                </div>
-                <p class="videosteps__text text">
-                  <a href="#" class="link">Выберите понравившегося</a> Вам эксперта «Звонить бесплатно» или «Позвонить»
-                  (если раннее Вы уже использовали первую бесплатную консультацию).
-                </p>
-                <div class="videosteps__image-container image-container">
-                  <img src="https://genesis-stars.com/local/assets/img/exo-call.jpg" alt="" class="videosteps__image" />
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="videocons__content-text">
-                  <div class="videocons__bloc">
-                    <h3 class="videocons__sub-title sub-title center">
-                      Что такое голосовая консультация по телефону.
-                    </h3>
-                    <p class="text center">
-                      Голосовая консультация эксперта с клиентом - это всегда индивидуальная и эксклюзивная услуга.
-                    </p>
-                    <p class="text center">
-                      Голосовая консультация является самой популярной формой консультации клиентов с экспертами на
-                      нашем сайте. Для получения такой консультации используется телефонная связь.
-                    </p>
-                  </div>
-                  <div class="videocons__bloc">
-                    <h3 class="videocons__sub-title sub-title center">
-                      Кто может получить голосовую консультацию
-                    </h3>
-                    <p class="text center">
-                      Получить голосовую консультацию может только лицо, которое предварительно прошло простую и быструю
-                      регистрацию на сайте Genesis-Stars.
-                    </p>
-                    <p class="text center">
-                      Зарегистрироваться на сайте Вы можете
-                      <a href="#" class="link">здесь</a>.
-                    </p>
-                  </div>
-                  <div class="videocons__bloc">
-                    <h3 class="videocons__sub-title sub-title center">
-                      Как получить консультацию эксперта по телефону
-                    </h3>
-                    <p class="text center">
-                      Получить голосовую консультацию можно двумя способами:
-                    </p>
-                    <p class="text center">
-                      1) Непосредственно через сайт genesis-stars.com путем выбора одного из экспертов и нажатия кнопки
-                      “Позвонить”.
-                    </p>
-                    <p class="text center">
-                      2) Через прямой звонок на номер телефонов горячей линии Центра круглосуточной поддержки клиентов
-                      Genesis-Stars, где операторы центра помогут Вам соединиться с любым из экспертов.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="support">
+        <section class="cabinetPage__support support">
           <div class="container">
             <div class="support__inner">
               <h3 class="support__sub-title sub-title center">
