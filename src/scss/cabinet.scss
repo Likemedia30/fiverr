@@ -245,7 +245,6 @@
   }
 
   &.unread {
-
     .notification__name {
       font-weight: 700;
     }
@@ -292,7 +291,6 @@
   }
 
   &.unread {
-
     .message__text {
       font-weight: 700;
     }
@@ -300,7 +298,6 @@
 }
 
 .invoice {
-
   &__item {
     margin-bottom: 15px;
     display: block;
@@ -317,7 +314,7 @@
   }
 
   &__item-link {
-    color: $color_additional
+    color: $color_additional;
   }
 
   &__accordeon-title {
@@ -337,9 +334,124 @@
   }
 }
 
-@media (min-width: 991px) {
-  .invoice {
+.orderOne {
+  &__table {
+    padding-top: 20px;
+    min-width: 450px;
+    overflow-x: scroll;
+    background-color: $fon_cabinetMenu;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
+    i {
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: $fontSize_small;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    tr {
+      border-bottom: 1px solid $color_border_input;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    td[colspan="3"] {
+      text-align: right;
+    }
+  }
+  &__table-header td {
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+  &__variablerow {
+    background-color: #fff;
+    border-bottom: 0 !important;
+    td:last-child {
+      text-align: right;
+    }
+  }
+  &__revision {
+    background-color: #fff;
+  }
+  &__revision td {
+    color: $color_hints;
+    padding-top: 0;
+  }
+  &__del {
+    padding: 0 10px;
+  }
+  &__invoice {
+    padding: 10px 0;
+    display: block;
+  }
+  &__item {
+    font-size: 20px;
+    font-weight: 400;
+
+    & > span {
+      display: block;
+      padding: 10px 0;
+      color: $color_hints;
+    }
+
+    a.link {
+      font-size: 20px;
+      font-weight: 400;
+      color: $color_second;
+    }
+  }
+  &__totalPrice {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex !important;
+    justify-content: space-between;
+
+    span:nth-child(2) {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .orderOne {
+    &__del {
+      padding: 0 10px;
+    }
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__totalPrice {
+      display: block !important;
+
+      span {
+        text-align: right;
+      }
+      span:nth-child(1) {
+        font-size: $fontSize_main;
+      }
+      span:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+  .invoice {
     &__documents {
       margin-top: 0;
     }

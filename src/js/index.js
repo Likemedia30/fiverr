@@ -377,12 +377,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // accordeon 
 
   (function(){
-    const accordeonItems = document.querySelectorAll('.accordeon__item');
+    const accordeonItems = document.querySelectorAll('.accordeon__item'),
+          accordeon = document.querySelectorAll('.accordeon');
 
     accordeonItems.forEach(e => e.addEventListener('click', openAccordeon));
 
-    function openAccordeon() {
-      if(this.classList.contains('open')) {
+    function openAccordeon(e) {
+      console.log(e.target.closest('.accordeon__item'))
+      // console.log(this)
+      if(this.classList.contains('open') && !e.target.closest('.accordeon__item')) {
         this.classList.remove('open');
       } else {
         accordeonItems.forEach(e => e.classList.remove('open'));

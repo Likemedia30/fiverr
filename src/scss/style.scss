@@ -164,6 +164,9 @@ button {
   outline: 0;
   background: none;
 }
+b {
+  font-weight: 700;
+}
 a,
 p,
 div {
@@ -1354,6 +1357,7 @@ section {
   .accordeon__body {
     height: auto;
     opacity: 1;
+    overflow: auto;
   }
 
   .accordeon__icon {
