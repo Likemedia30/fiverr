@@ -46,7 +46,7 @@
 
                 <div class="header__cabinet-desk">
                   <a href="personal-info.html" class="header__item">Мой профиль</a>
-                  <a href="#" class="header__item">Мои заказы</a>
+                  <a href="orders.html" class="header__item">Мои заказы</a>
                   <a href="messages.html" class="header__item">Мои сообщения</a>
                   <a href="notifications.html" class="header__item">Notifications</a>
                   <a href="#" class="header__item">Мои звонки</a>
@@ -402,7 +402,7 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <h1 class="cabinetPage__title title">Personal Info</h1>
+                <h1 class="cabinetPage__title title">Messages</h1>
               </div>
             </div>
             <div class="row">
@@ -540,107 +540,90 @@
                 </div>
               </div>
               <div class="col">
-                <form class="row">
-                  <div class="col-lg-6 col-12">
-                    <div class="input-group">
-                      <label for="name">Name</label>
-                      <input name="name" id="name" type="text" value="Iov" />
-                    </div>
+                <a href="#" class="message unread">
+                  <div class="message__avatar">
+                    <img
+                      src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                      alt=""
+                    />
+                    <div class="message__status"></div>
                   </div>
-                  <div class="col-lg-6 col-12">
-                    <div class="input-group">
-                      <label for="lastName">Last Name</label>
-                      <input type="text" id="lastName" name="lastName" value="Albu" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="" style="margin-bottom: 10px; display:block;">Gender</label>
-                    <div class="input-group radio-group">
-                      <label class="radio-strd">
-                        Male
-                        <input type="radio" name="gender" />
-                        <span class="radio-strd__mark"></span>
-                      </label>
-                      <label class="radio-strd">
-                        Female
-                        <input type="radio" name="gender" />
-                        <span class="radio-strd__mark"></span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="">ДАТА РОЖДЕНИЯ</label>
-                      <div class="cabinetPage__selectBlock">
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Day</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Month</option>
-                            <option value="1">January</option>
-                            <option value="2">February</option>
-                            <option value="3">March</option>
-                            <option value="4">April</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
-                        <div class="cabinetPage__select-container select-container">
-                          <select name="" id="">
-                            <option value="default">Year</option>
-                            <option value="default">2000</option>
-                            <option value="default">2001</option>
-                            <option value="default">2003</option>
-                            <option value="default">2004</option>
-                          </select>
-                          <i class="fas fa-caret-down"></i>
-                        </div>
+                  <div class="message__info">
+                    <div class="message__name">
+                      <span>Natalia</span>
+                      <div class="message__date">
+                        50w ago
                       </div>
                     </div>
+                    <p class="message__text text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam natus fuga incidunt sed debitis
+                      minima, error ducimus ipsum eveniet, a voluptatum iure nemo, provident tempora.
+                    </p>
                   </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="phone">Phone</label>
-                      <input type="text" id="phone" name="phone" value="+37368706774" />
-                    </div>
+                </a>
+                <a href="#" class="message">
+                  <div class="message__avatar">
+                    <img
+                      src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                      alt=""
+                    />
+                    <div class="message__status online"></div>
                   </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="email">Email</label>
-                      <input type="text" id="email" name="email" value="+37368706774" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="input-group">
-                      <label for="password">Your password</label>
-                      <button type="button" class="cabinetPage__passwordChange-button" id="passwordChangeButton">
-                        <i class="fas fa-lock"></i>
-                        <span>Change Password</span>
-                      </button>
-
-                      <div class="cabinetPage__passwordBlock">
-                        <div class="input-group">
-                          <label for="password">New Password</label>
-                          <input type="password" id="password" name="password" value="asfsflsekseiojfs" />
-                        </div>
-                        <div class="input-group">
-                          <label for="reppassword">Repeat Password</label>
-                          <input type="password" id="reppassword" name="reppassword" value="asfsflsekseiojfs" />
-                        </div>
+                  <div class="message__info">
+                    <div class="message__name">
+                      <span>Natalia</span>
+                      <div class="message__date">
+                        28 dec, 2020
                       </div>
                     </div>
+                    <p class="message__text text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam natus fuga incidunt sed debitis
+                      minima, error ducimus ipsum eveniet, a voluptatum iure nemo, provident tempora.
+                    </p>
                   </div>
-                  <div class="col-12">
-                    <button type="submit" class="saveButton button">Save</button>
+                </a>
+                <a href="#" class="message unread">
+                  <div class="message__avatar">
+                    <img
+                      src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                      alt=""
+                    />
+                    <div class="message__status"></div>
                   </div>
-                </form>
+                  <div class="message__info">
+                    <div class="message__name">
+                      <span>Natalia</span>
+                      <div class="message__date">
+                        1h ago
+                      </div>
+                    </div>
+                    <p class="message__text text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam natus fuga incidunt sed debitis
+                      minima, error ducimus ipsum eveniet, a voluptatum iure nemo, provident tempora.
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="message unread">
+                  <div class="message__avatar">
+                    <img
+                      src="https://genesis-stars.com/upload/iblock/b2e/b2ebe706cd8ace1860234ba329b002aa.png"
+                      alt=""
+                    />
+                    <div class="message__status"></div>
+                  </div>
+                  <div class="message__info">
+                    <div class="message__name">
+                      <span>Natalia</span>
+                      <div class="message__date">
+                        1 day ago
+                      </div>
+                    </div>
+                    <p class="message__text text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam natus fuga incidunt sed debitis
+                      minima, error ducimus ipsum eveniet, a voluptatum iure nemo, provident tempora.
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
